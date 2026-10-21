@@ -14,7 +14,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent2);outline-of
 /* hero */
 .hero{position:relative;overflow:hidden;border-radius:0 0 48px 48px;min-height:640px;
   background:radial-gradient(120% 90% at 70% 15%,#ff7a2e 0%,#ff4a1a 35%,#8a1d10 70%,#2a0a07 100%)}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.55))}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.55))}
 .hero .wrap{position:relative;z-index:2;min-height:640px;display:flex;flex-direction:column}
 nav{display:flex;align-items:center;justify-content:space-between;padding:26px 0}
 .logo{font-weight:700;font-size:18px}
@@ -29,7 +29,8 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:26px 0
 .tag{max-width:300px;justify-self:end;align-self:center}
 .tag h2{font-size:22px;line-height:1.25;margin:0 0 10px}
 .tag p{margin:0;font-size:13px;color:rgba(255,255,255,.75)}
-.silhouette{position:absolute;z-index:1;right:30%;bottom:0;width:min(44%,420px);opacity:.95}
+.hero-photo{position:absolute;z-index:1;left:58%;bottom:0;transform:translateX(-50%);height:150%;width:auto;
+  mix-blend-mode:multiply;filter:contrast(1.1) brightness(.8) saturate(.9)}
 .skills{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:0 0 36px;font-size:13px;list-style:none;margin-bottom:0;margin-top:0}
 .skills b{display:block;color:var(--accent2);font-size:11px;margin-bottom:2px}
 
@@ -77,7 +78,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .links a.plain{display:none}
   .hero-body{grid-template-columns:1fr}
   .tag{justify-self:start;margin-top:12px}
-  .silhouette{right:-8%;width:62%;opacity:.5}
+  .hero-photo{left:62%;height:150%;opacity:.7}
   .skills{grid-template-columns:repeat(2,1fr)}
   .about-grid,.cards{grid-template-columns:1fr}
   .hero{border-radius:0 0 32px 32px}
@@ -94,4 +95,3 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .hp{position:absolute;left:-9999px}
 #status{margin:0;font-size:14px;min-height:1.4em}
 .empty{color:var(--muted);grid-column:1/-1}
-
